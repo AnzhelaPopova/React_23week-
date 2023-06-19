@@ -1,38 +1,34 @@
 
 import React from 'react'
 import './App.css';
-import Hero from './components/hero';
-import './components/Hero.css';
+import Rate from './components/rate';
+import './components/Rate.css';
 
-const heroes = [
+const rates = [
   {
     "color": "blue",
     "name": "Безлимитный 300",
     "price": "300",
     "speed": "до 10 Мбит/сек",
-    "Info": "Объём включенного трафика не ограничен",
-
   },
   {
     "color": "green",
     "name": "Безлимитный 450", 
     "price": "450",
     "speed": "до 50 Мбит/сек",
-    "Info": "Объём включенного трафика не ограничен",
   },
   {
     "color": "red",
     "name": "Безлимитный 550",
     "price": "550",
     "speed": "до 100 Мбит/сек",
-    "Info": "Объём включенного трафика не ограничен",
+    "selected":"true",
   },
   {
     "color": "black",
     "name": "Безлимитный 1000",
     "price": "1000",
     "speed": "до 200 Мбит/сек",
-    "Info": "Объём включенного трафика не ограничен",
   },
   
 ];
@@ -42,8 +38,13 @@ class App extends React.Component {
   return (
     <div className="App">
       {
-        heroes.map ((hero) =>
-        <Hero name = {hero.name} price = {hero.price} speed = {hero.speed} info = {hero.Info} color = {hero.color}> </Hero>
+        rates.map ((rate) =>
+        <Rate 
+        name = {rate.name} 
+        price = {rate.price} 
+        speed = {rate.speed} 
+        info = {rate.Info} 
+        color = {rate.color}> </Rate>
         )
       }
     </div>
